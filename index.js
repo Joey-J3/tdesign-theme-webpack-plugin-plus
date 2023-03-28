@@ -45,7 +45,6 @@ class ThemePlugin {
       indexFileName: "index.html",
       generateOnce: false,
       output: defaultOutputDir,
-      entry: path.join(__dirname, "./src/styles/index.less"),
       stylesDir: path.join(__dirname, "./src/styles"),
       themeVariables: ['@brand-color']
     };
