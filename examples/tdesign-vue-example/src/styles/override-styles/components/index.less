@@ -1,0 +1,71 @@
+@import "../variables.less";
+
+.t-radio-group.t-radio-group__outline {
+  .t-radio-button {
+    border: none;
+    border-radius: @border-radius-default;
+    &:first-child, &:last-child {
+      border-radius: @border-radius-default;
+    }
+  }
+}
+
+// base button - primary theme
+.t-button--variant-base.t-button--theme-primary {
+  border: none;
+  border-radius: @border-radius-default;
+  position: relative;
+  z-index: 0;
+  &:not(.t-is-disabled):hover::before {
+    opacity: 1;
+  }
+  // disabled
+  &.t-is-disabled {
+    background-image: none;
+  }
+}
+
+.t-pagination__total {
+  text-align: right;
+  margin-right: @spacer-2;
+}
+
+// 表格
+.t-table {
+  th, td {
+    border: none;
+  }
+  thead td, th {
+    font: @font-body-medium;
+    font-weight: 500;
+  }
+  .t-table__header--fixed > tr > th {
+    background-color: @bg-color-container;
+  }
+  .t-table__body {
+    tr:not(.t-table__empty-row) {
+      border-radius: @border-radius-large;
+      & + & {
+        margin-top: @spacer-l;
+      }
+    }
+  }
+  .t-table__empty {
+    height: auto;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0 @spacer-l;
+  }
+  // Set border-radius on the top-left and bottom-left of the first table data on the table row
+  td:first-child,
+  th:first-child {
+    border-radius: @border-radius-large 0 0 @border-radius-large;
+  }
+
+  // Set border-radius on the top-right and bottom-right of the last table data on the table row
+  td:last-child,
+  th:last-child {
+    border-radius: 0 @border-radius-large @border-radius-large 0;
+  }
+}
