@@ -1,10 +1,11 @@
 {
   "name": "tdesign-theme-webpack-plugin",
-  "version": "1.0.2",
-  "description": "A webpack plugin designed to customize styles with a yuheng theme, which overrides the default styles of the tdesign light theme.",
+  "version": "1.0.0",
+  "description": "A webpack plugin designed to customize styles by generating color palette, which overrides the default styles of the tdesign light theme.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install": "cd ./examples/tdesign-vue-example && npm install",
+    "dev:example": "cd ./examples/tdesign-vue-example && npm run serve"
   },
   "keywords": [
     "td",
